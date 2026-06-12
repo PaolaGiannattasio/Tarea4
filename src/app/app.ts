@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,20 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-routing-avanzado-modular');
+
+  constructor(private router: Router) {
+
+    const ultimaRuta = localStorage.getItem('ultimaRuta');
+
+    if (ultimaRuta && window.location.pathname === '/') {
+      this.router.navigateByUrl(ultimaRuta);
+    }
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        localStorage.setItem('ultimaRuta', event.urlAfterRedirects);
+      }
+    });
+  }
+
 }
