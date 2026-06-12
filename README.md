@@ -1,59 +1,107 @@
-# AngularRoutingAvanzadoModular
+# Angular Routing Avanzado y LocalStorage
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+## Descripción
 
-## Development server
+Este proyecto fue desarrollado como la Tarea N°4 de Angular. La aplicación implementa navegación modular utilizando Routing, Lazy Loading y almacenamiento de información mediante LocalStorage.
 
-To start a local development server, run:
+La aplicación permite navegar entre diferentes secciones, visualizar una lista de usuarios y productos, acceder al detalle de un producto mediante rutas dinámicas y recordar la última ruta visitada para redirigir automáticamente al usuario cuando vuelve a ingresar.
+
+## Funcionalidades
+
+* Routing principal con Angular Router.
+* Módulos independientes:
+
+  * UsuariosModule
+  * ProductosModule
+* Lazy Loading para optimizar la carga de módulos.
+* Navegación mediante routerLink.
+* Uso de router-outlet para renderizar las vistas.
+* Ruta dinámica para detalle de productos.
+* Persistencia de la última ruta visitada utilizando LocalStorage.
+* Redirección automática a la última sección visitada.
+
+## Estructura de Rutas
+
+| Ruta           | Descripción          |
+| -------------- | -------------------- |
+| /              | Página principal     |
+| /usuarios      | Listado de usuarios  |
+| /productos     | Listado de productos |
+| /productos/:id | Detalle de producto  |
+
+## Tecnologías Utilizadas
+
+* Angular
+* TypeScript
+* HTML
+* CSS
+* Angular Router
+* LocalStorage
+
+## Instalación y Ejecución
+
+### Clonar el repositorio
+
+```bash
+git clone https://github.com/PaolaGiannattasio/Tarea4
+```
+
+### Instalar dependencias
+
+```bash
+npm install
+```
+
+### Ejecutar la aplicación
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Luego abrir en el navegador:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Build de Producción
+
+Para generar la versión optimizada para despliegue:
 
 ```bash
-ng generate --help
+ng build --configuration production
 ```
 
-## Building
+Los archivos generados se encontrarán dentro de la carpeta:
 
-To build the project run:
-
-```bash
-ng build
+```text
+dist/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Despliegue
 
-## Running unit tests
+Aplicación publicada en:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+[PEGAR_LINK_DE_NETLIFY]
 
-```bash
-ng test
-```
+## Capturas de Pantalla
 
-## Running end-to-end tests
+Se incluyen capturas mostrando:
 
-For end-to-end (e2e) testing, run:
+* Página principal.
+* Módulo Usuarios.
+* Módulo Productos.
+* Detalle de producto mediante ruta dinámica.
+* Redirección automática utilizando LocalStorage.
 
-```bash
-ng e2e
-```
+## Datos de la Entrega
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**Nombre:** Paola Giannattasio
 
-## Additional Resources
+**Unidad:** Unidad 4 - Angular Routing Avanzado
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Bibliografía
+
+* Documentación oficial de Angular: https://angular.dev
+* Angular Router Guide: https://angular.dev/guide/routing
+* MDN Web Docs - LocalStorage: https://developer.mozilla.org
