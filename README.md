@@ -64,25 +64,17 @@ Luego abrir en el navegador:
 http://localhost:4200
 ```
 
-## Build de Producción
+## Despliegue
 
-Para generar la versión optimizada para despliegue:
+Para desplegar la aplicación en GitHub Pages utilizando la configuración preparada para Git Bash, ejecuta:
 
 ```bash
-ng build --configuration production
+npm run deploy
 ```
-
-Los archivos generados se encontrarán dentro de la carpeta:
-
-```text
-dist/
-```
-
-## Despliegue
 
 Aplicación publicada en:
 
-[PEGAR_LINK_DE_NETLIFY]
+GitHub Pages: https://paolagiannattasio.github.io/Tarea4/
 
 ## Capturas de Pantalla
 
